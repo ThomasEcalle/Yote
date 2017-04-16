@@ -1,8 +1,11 @@
 package com.example.my_pc.yote.engine.board;
 
 
+import android.util.Log;
+
 import com.example.my_pc.yote.Constants;
 import com.example.my_pc.yote.engine.Alliance;
+import com.example.my_pc.yote.engine.moves.Move;
 import com.example.my_pc.yote.engine.players.BlackPlayer;
 import com.example.my_pc.yote.engine.players.Player;
 import com.example.my_pc.yote.engine.players.WhitePlayer;
@@ -42,9 +45,18 @@ public final class Board
         this.blackPieces = calculateActivePieces(builder, Alliance.BLACK);
         final List<Move> whiteMoves = calculateLegalMoves(this.whitePieces);
         final List<Move> blackMoves = calculateLegalMoves(this.blackPieces);
-        this.currentPlayer = selectNextPlayer(builder.nextMoveMaker);
         this.whitePlayer = new WhitePlayer(this, whiteMoves, blackMoves);
         this.blackPlayer = new BlackPlayer(this, whiteMoves, blackMoves);
+        this.currentPlayer = selectNextPlayer(builder.nextMoveMaker);
+
+        Log.w(Constants.TAG, "current player = "  + currentPlayer.getAlliance());
+    }
+
+    public static Board createInitialBoard()
+    {
+        final Builder builder = new Builder();
+        builder.setMoveMaker(Alliance.WHITE);
+        return builder.build();
     }
 
     private Player selectNextPlayer(final Alliance nextMoveMaker)

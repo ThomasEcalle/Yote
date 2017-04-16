@@ -6,8 +6,7 @@ package com.example.my_pc.yote.engine.board;
 
 public class Tile
 {
-    private int tileCoordonate;
-    private boolean isTileOccupied = false;
+    protected int tileCoordonate;
     private Piece piece;
 
     public Tile(final int tileCoordonate, final Piece piece)
@@ -17,6 +16,11 @@ public class Tile
         this.piece = piece;
     }
 
+    public Tile(final int tileCoordonate)
+    {
+        this.tileCoordonate = tileCoordonate;
+    }
+
     public int getTileCoordonate()
     {
         return tileCoordonate;
@@ -24,7 +28,7 @@ public class Tile
 
     public boolean isTileOccupied()
     {
-        return isTileOccupied;
+        return piece != null;
     }
 
     public Piece getPiece()

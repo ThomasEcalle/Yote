@@ -3,7 +3,7 @@ package com.example.my_pc.yote.engine.players;
 import com.example.my_pc.yote.engine.Alliance;
 import com.example.my_pc.yote.engine.board.Piece;
 import com.example.my_pc.yote.engine.board.Board;
-import com.example.my_pc.yote.engine.board.Move;
+import com.example.my_pc.yote.engine.moves.Move;
 
 import java.util.List;
 

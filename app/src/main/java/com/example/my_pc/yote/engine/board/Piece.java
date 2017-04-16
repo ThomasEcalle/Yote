@@ -1,6 +1,8 @@
 package com.example.my_pc.yote.engine.board;
 
 import com.example.my_pc.yote.engine.Alliance;
+import com.example.my_pc.yote.engine.moves.Move;
+import com.example.my_pc.yote.engine.moves.PlacementMove;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,11 +19,11 @@ public final class Piece
     private boolean isInReserve;
 
 
-    public Piece(final Alliance pieceAlliance, final int piecePosition, final boolean isInReserve)
+    public Piece(final Alliance pieceAlliance, final int piecePosition)
     {
         this.pieceAlliance = pieceAlliance;
         this.piecePosition = piecePosition;
-        this.isInReserve = isInReserve;
+//        this.isInReserve = isInReserve;
     }
 
     public Alliance getPieceAlliance()

@@ -1,4 +1,7 @@
-package com.example.my_pc.yote.engine.board;
+package com.example.my_pc.yote.engine.moves;
+
+import com.example.my_pc.yote.engine.board.Board;
+import com.example.my_pc.yote.engine.board.Piece;
 
 /**
  * Created by Thomas Ecalle on 15/04/2017.
@@ -18,4 +21,9 @@ public abstract class Move
     }
 
     public abstract Board execute();
+
+    public int getDestinationCoordinate()
+    {
+        return destinationCoordinate;
+    }
 }

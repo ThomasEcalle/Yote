@@ -12,7 +12,7 @@ public class BoardUtils
 {
     public static boolean isValidCoordonate(final int coordonate)
     {
-        return coordonate >= 0 && coordonate <= Constants.NUM_TILES;
+        return coordonate >= 0 && coordonate < Constants.NUM_TILES;
     }
 }
 

@@ -9,4 +9,5 @@ public class Constants
     public static final int NUM_TILES = 30;
     public static final int NUM_COLUMNS = 5;
     public static final int NUM_ROWS = 6;
+    public static final String TAG = "YOTE_TAG";
 }
